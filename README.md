@@ -1,4 +1,4 @@
-# React Fundamentals
+# React Fundamentals Project
 
 #### React Course
 
