@@ -16,15 +16,18 @@ const Bookstore = () => {
   //removing getBook logic to make the code scalable
 
   return (
-    <section className="booklist">
-      {books.map((book) => {
-        //destructing
-        // const { img, title, author, id } = book;
-        //spread operator
-        return <Book {...book} key={book.id} />;
-        //key should only be mentioned in places that are iterating over the attributes
-      })}
-    </section>
+    <>
+      <h1>Top 6 Amazon Best Sellers</h1>
+      <section className="booklist">
+        {books.map((book, index) => {
+          //destructing
+          // const { img, title, author, id } = book;
+          //spread operator
+          return <Book {...book} key={book.id} number={index} />;
+          //key should only be mentioned in places that are iterating over the attributes
+        })}
+      </section>
+    </>
   );
 };
 
@@ -57,4 +60,6 @@ root.render(<Bookstore />);
 export default Bookstore;
 //you can only have one default export per React file
 
-//write a function to add books and remove books
+//write a function to fliter according to genre + side-bar with a list of genres
+// Create a header component
+//button - each click brings to the amazon website that sells the book
